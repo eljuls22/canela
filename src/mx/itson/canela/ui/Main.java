@@ -18,7 +18,7 @@ import mx.itson.canela.enumeradores.Dificultad;
 public class Main {
 
     public static void main(String[] args) {
-
+        // Comentario para ver si github funciona
         Receta receta = new Receta();
         receta.setNombre("Flan napolitano");
         receta.setDescripcion("Aprende a preparar un clásico de los postres: ¡FLAN NAPOLITANO! Hecho con CARNATION® CLAVEL® y LA LECHERA®. Un postre que no puede faltar en tu recetario.");
