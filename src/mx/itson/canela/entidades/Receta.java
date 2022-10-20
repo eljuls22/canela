@@ -4,6 +4,7 @@
  */
 package mx.itson.canela.entidades;
 
+import com.google.gson.Gson;
 import java.util.List;
 import mx.itson.canela.enumeradores.Dificultad;
 
@@ -14,8 +15,21 @@ import mx.itson.canela.enumeradores.Dificultad;
 public class Receta {
 
     /**
+     * @return the usuario
+     */
+    /**
      * @return the nombre
      */
+    public Receta deserializar(String json) {
+        Receta receta = new Receta();
+
+        try {
+            receta = new Gson().fromJson(json, Receta.class);
+        } catch (Exception ex) {
+            System.err.print("Ocurrió un error: " + ex.getMessage());
+        }
+        return receta;
+    }
     private String nombre;
     private String descripcion;
     private int numeroPorciones;
@@ -23,6 +37,7 @@ public class Receta {
     private List<Ingrediente> ingredientes;
     private List<Paso> pasos;
     private Dificultad dificultad;
+    private Usuario usuario;
 
     public String getNombre() {
         return nombre;
@@ -119,4 +134,14 @@ public class Receta {
         this.dificultad = dificultad;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

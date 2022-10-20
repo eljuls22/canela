@@ -11,7 +11,7 @@ package mx.itson.canela.entidades;
 public class Paso {
 
     private int orden;
-    private String descipcion;
+    private String descripcion;
 
     /**
      * @return the orden
@@ -31,14 +31,14 @@ public class Paso {
      * @return the descipcion
      */
     public String getDescipcion() {
-        return descipcion;
+        return descripcion;
     }
 
     /**
      * @param descipcion the descipcion to set
      */
     public void setDescipcion(String descipcion) {
-        this.descipcion = descipcion;
+        this.descripcion = descipcion;
     }
 
 }
